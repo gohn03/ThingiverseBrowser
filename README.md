@@ -1,0 +1,1 @@
+This extension allows users to browse 3D models on Thingiverse.com and download models to the Slicer platform.
