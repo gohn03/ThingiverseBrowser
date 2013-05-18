@@ -9,10 +9,8 @@ set(MODULE_PYTHON_SCRIPTS
 set(MODULE_PYTHON_RESOURCES
     )
     
-#-----------------------------------------------------------
-slicerMacroBuildScriptedModule(
-    NAME ${MODULE_NAME}
-    SCRIPTS ${MODULE_PYTHON_SCRIPTS}
-    RESOURCES ${MODULE_PYTHON_RESOURCES}
-    WITH_GENERIC_TESTS
-    )
+
+if(NOT Slicer_SOURCE_DIR)
+  find_package(Slicer REQUIRED)
+  include(${Slicer_USE_FILE})
+endif()
